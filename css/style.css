@@ -1,6 +1,9 @@
 footer li {
   list-style: none;
 }
+.article-tag-list {
+  margin: 0 !important;
+}
 .sen img {
   border: 1px solid #000;
   padding: 10px;
@@ -304,6 +307,9 @@ body {
   background-color: #f0fff0;
   color: #32cd32 !important;
   font-size: 16px;
+}
+.article-entry img {
+  max-width: 95% !important;
 }
 #wrap {
   height: 100%;
