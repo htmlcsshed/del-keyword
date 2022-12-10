@@ -53,7 +53,7 @@ footer li {
   box-flex: 1;
   -webkit-flex-grow: 1;
   flex-grow: 1;
-  height: 5px; /* 線の太さ */
+  height: 3px; /* 線の太さ */
   background: #32cd32; /* 線の色 */
   margin-right: 20px;
 }
@@ -65,7 +65,7 @@ footer li {
   box-flex: 1;
   -webkit-flex-grow: 1;
   flex-grow: 1;
-  height: 5px; /* 線の太さ */
+  height: 3px; /* 線の太さ */
   background: #32cd32; /* 線の色 */
   margin-left: 20px;
 }
