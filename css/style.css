@@ -15,6 +15,9 @@ footer li {
 .main li {
   font-size: 17px;
 }
+.main p {
+  line-height: 3em !important;
+}
 .main h2 {
   margin-bottom: 0 !important;
   margin-top: 90px !important;
@@ -40,24 +43,31 @@ footer li {
   -moz-box-align: center;
   -ms-flex-align: center;
   -webkit-align-items: center;
-  align-items: center; /* 垂直中心 */
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center; /* 水平中心 */
-}
-.main h3:before,
-.main h3:after {
-  border-top: 5px solid #32cd32;
-  content: "";
-  width: 10em; /* 線の長さ */
+  align-items: center;
 }
 .main h3:before {
-  margin-right: 1em; /* 文字の右隣 */
+  content: "";
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  height: 5px; /* 線の太さ */
+  background: #32cd32; /* 線の色 */
+  margin-right: 20px;
 }
 .main h3:after {
-  margin-left: 1em; /* 文字の左隣 */
+  content: "";
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  height: 5px; /* 線の太さ */
+  background: #32cd32; /* 線の色 */
+  margin-left: 20px;
 }
 .article-title {
   font-size: 35px !important;
@@ -101,6 +111,9 @@ i.fa-solid.fa-list.fa-1x {
 }
 .hexousb {
   width: 72%;
+}
+.textimg {
+  border-radius: 20px;
 }
 body {
   width: 100%;
@@ -313,6 +326,36 @@ body {
 }
 .article-entry img {
   max-width: 95% !important;
+}
+.category-list-item {
+  text-align: left;
+  list-style: none;
+}
+.category-list-child .category-list-item {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.category-list-child .category-list-item:before {
+  content: "";
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  height: 1px; /* 線の太さ */
+  background: #808080; /* 線の色 */
+  margin-right: 20px;
+  margin-left: -10px;
 }
 #wrap {
   height: 100%;
