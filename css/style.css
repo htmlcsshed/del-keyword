@@ -1,6 +1,43 @@
 footer li {
   list-style: none;
 }
+summary {
+  display: block;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+summary {
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-weight: 600;
+}
+summary .tocopen {
+  font-size: 20px;
+  font-weight: 400;
+}
+.con p {
+  line-height: 10px !important;
+}
+.con {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50%;
+  border: solid 2px #808080;
+  background-color: #f0fff0;
+  padding-left: 30px;
+  padding-right: auto;
+  margin-top: 90px;
+}
+.con li {
+  margin-left: 30px;
+}
+.con a {
+  text-decoration: none;
+  color: #555 !important;
+}
 .article-tag-list {
   margin: 0 !important;
 }
@@ -15,7 +52,7 @@ footer li {
 .main li {
   font-size: 17px;
 }
-.main p {
+.main p:not(.con p) {
   line-height: 3em !important;
 }
 .main h2 {
@@ -77,26 +114,6 @@ footer li {
 }
 .sen li {
   line-height: 40px !important;
-}
-.con {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 50%;
-  border: solid 2px #808080;
-  background-color: #f0fff0;
-  padding-left: 30px;
-  padding-right: auto;
-  margin-top: 90px;
-}
-.con li {
-  margin-left: 30px;
-}
-.con a {
-  text-decoration: none;
-  color: #555 !important;
-}
-.con h4 {
-  font-size: 22px !important;
 }
 .lili {
   margin-top: 30px;
