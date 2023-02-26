@@ -131,6 +131,17 @@ i.fa-solid.fa-list.fa-1x {
   width: auto !important;
   height: 350px !important;
 }
+span.aa {
+  color: #f00 !important;
+}
+span.bb {
+  color: #00f !important;
+}
+span.cc {
+  color: #ffa500;
+  font-weight: 600;
+  font-size: 18px;
+}
 body {
   width: 100%;
 }
