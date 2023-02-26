@@ -129,7 +129,7 @@ i.fa-solid.fa-list.fa-1x {
 .textimg {
   border-radius: 20px;
   width: auto !important;
-  height: 350px !important;
+  max-height: 350px;
 }
 span.aa {
   color: #f00 !important;
