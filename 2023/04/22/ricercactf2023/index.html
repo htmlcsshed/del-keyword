@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>RICERCA CTF 2023 writeup [welcome, crackme, Revolving letters] | DelのKeyワード</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="RICERCA CTF 2023 writeup [welcome, crackme, Revolving letters]">
+<meta property="og:url" content="https://htmlcsshed.github.io/delkeyword/2023/04/22/ricercactf2023/index.html">
+<meta property="og:site_name" content="DelのKeyワード">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://htmlcsshed.github.io/delkeyword/2023/04/22/ricercactf2023/%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3%E3%83%83%E3%82%AF%E3%82%B92.png">
+<meta property="og:image" content="https://htmlcsshed.github.io/delkeyword/2023/04/22/ricercactf2023/flag.jpg">
+<meta property="og:image" content="https://htmlcsshed.github.io/delkeyword/2023/04/22/ricercactf2023/hint.jpg">
+<meta property="og:image" content="https://htmlcsshed.github.io/delkeyword/2023/04/22/ricercactf2023/flag2.jpg">
+<meta property="article:published_time" content="2023-04-22T14:52:21.000Z">
+<meta property="article:modified_time" content="2023-04-26T15:27:00.230Z">
+<meta property="article:author" content="Del12">
+<meta property="article:tag" content="CTF">
+<meta property="article:tag" content="writeup">
+<meta property="article:tag" content="RICERCA CTF 2023">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://htmlcsshed.github.io/delkeyword/2023/04/22/ricercactf2023/%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3%E3%83%83%E3%82%AF%E3%82%B92.png">
+<meta name="twitter:creator" content="@problem_del">
+  
+    <link rel="alternate" href="/delkeyword/atom.xml" title="DelのKeyワード" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/delkeyword/css/images/author.jpg">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/delkeyword/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/delkeyword/fancybox/jquery.fancybox.min.css">
+
+  
+  <link href="https://use.fontawesome.com/releases/v6.2.1/css/all.css" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v6.2.0/css/all.css" rel="stylesheet">
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/delkeyword/" id="logo">DelのKeyワード</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/delkeyword/" id="subtitle">DTMとかプログラミングとか</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/delkeyword/">Home</a>
+        
+          <a class="main-nav-link" href="/delkeyword/archives">Articles</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <a id="nav-search-btn" class="nav-icon" title="検索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="検索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://htmlcsshed.github.io/delkeyword"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-ricercactf2023" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/delkeyword/2023/04/22/ricercactf2023/" class="article-date">
+  <time class="dt-published" datetime="2023-04-22T14:52:21.000Z" itemprop="datePublished">2023-04-22</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/delkeyword/categories/CTF/">CTF</a>►<a class="article-category-link" href="/delkeyword/categories/CTF/writeup/">writeup</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      RICERCA CTF 2023 writeup [welcome, crackme, Revolving letters]
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <div class="main">
+
+<p>picoCTF、RitsecCTFに続き、今回はRicercaCTFに参加しました。
+<br>
+解けた問題は、「<span class="cc">welcome</span>」、「<span class="cc">crackme</span>」、「<span class="cc">Revolving Letters</span>」、、、<span class="big">以上！</span></p>
+
+<img src="/delkeyword/2023/04/22/ricercactf2023/%E3%82%B0%E3%83%A9%E3%83%95%E3%82%A3%E3%83%83%E3%82%AF%E3%82%B92.png" class="textimg">
+
+<p>1問に1時間くらいかかりました。<span class="small">そもそも、gzファイル展開したらtarファイルが出てくることもわかってなかった。</span>
+<br>
+もうちょっとctfの実力を上げてから、writeup書いていこうかなぁなんて思ってましたが、今回のctfはwriteupを書くといいことあるかもってことが分かったので、たった3問でも書きます。</p>
+
+
+<span id="more"></span>
+<div class="con">
+<details>
+    <summary><i class="fa-solid fa-list fa-1x"></i>目次<span class="tocopen"> 【 開閉 】</span></summary>
+<p>１，<a href="##1">welcome</a></p>
+<p>２，<a href="##2">crackme</a></p>
+<p>３，<a href="##3">Revolving Letters</a></p>
+<p>４，<a href="##4">今後、、、</a></p>
+</details>
+</div>
+
+<p>数字がふってあるところだけを見れば、分かるようになってます。</p>
+
+<div class="sen">
+<h2 id="#1">welcome</h2>
+<h3>問題文</h3>
+<p>Ricerca CTF 2023へようこそ！ この問題のフラグを見つけるには
+<br>
+まず、<a target="_blank" rel="noopener" href="https://2023.ctf.ricsec.co.jp/rules">ルール</a>を読みましょう。
+<br>
+次に、Discordの#announcementチャンネルに投稿されたフラグを探しましょう。</p>
+
+<h3>解き方</h3>
+<ol>
+<li>「<a target="_blank" rel="noopener" href="https://2023.ctf.ricsec.co.jp/rules">ルール</a>」のリンク先に飛ぶ。</li>
+<li>「Official Discord」をクリックしてDiscoredに参加。</li>
+<li>「#announcement」をクリック。</li>
+<li>flagゲット。(写真中央)</li>
+<img src="/delkeyword/2023/04/22/ricercactf2023/flag.jpg">
+</ol>
+
+
+<h2 id="#2">crackme</h2>
+<h3>問題文</h3>
+<p>パスワードをクラックできますか。</p>
+
+<h3>解き方</h3>
+<ol>
+<li>添付のファイルをダウンロード。</li>
+<li>ファイルの名前が長かったため、「password.gz」に名前変更。</li>
+<li>linuxで、次のコマンドを打つ。</li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gzip -d password.gz</span><br></pre></td></tr></table></figure>
+
+<p>「password」というファイルができたので、調べてみると、tarファイルということがわかった。</p>
+
+<li>次の2つのコマンドを打つ。</li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cp</span> password password.tar</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ tar -xvf password.tar</span><br></pre></td></tr></table></figure>
+<li>「crackme」というフォルダができたので、cdで移動。</li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> crackme</span><br></pre></td></tr></table></figure>
+<p>移動した先に、「crackme」というファイルがあったので、とりあえず実行すると、passwordが必要だと分かった。</p>
+<li>catコマンドで、「crackme」の中身を確認。</li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cat</span> crackme</span><br></pre></td></tr></table></figure>
+<p>だいぶ文字化けしてるが、読めるところを探すと、ヒントが、、、！</p>
+
+<img src="/delkeyword/2023/04/22/ricercactf2023/hint.jpg">
+
+<li>次のコマンドを実行し、パスワードを入力</li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ./crackme</span><br></pre></td></tr></table></figure>
+
+<li>flagゲット。（写真下部）</li>
+<img src="/delkeyword/2023/04/22/ricercactf2023/flag2.jpg">
+</ol>
+
+
+<h2 id="#3">Revolving Letters</h2>
+<h3>問題文</h3>
+<p>文字を回すの、だーぁれ？</p>
+<h3>解き方</h3>
+<ol>
+<li>添付ファイルをダウンロード。</li>
+<li>ファイルの名前を「attach.gz」に変更。</li>
+<li>前の問題と同じ要領で、linuxコマンドを実行する。</li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gzip -d attach.gz</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cp</span> attach attach.tar</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ tar -xvf attach.tar</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> revolving-letters</span><br></pre></td></tr></table></figure>
+<li>「output.txt」と「chall.py」が入っていた。</li>
+<p class="bash">shall.py</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">LOWER_ALPHABET = <span class="string">&quot;abcdefghijklmnopqrstuvwxyz&quot;</span></span><br><span class="line"></span><br><span class="line">def encrypt(secret, key):</span><br><span class="line">  assert len(secret) &lt;= len(key)</span><br><span class="line"></span><br><span class="line">  result = <span class="string">&quot;&quot;</span></span><br><span class="line">  <span class="keyword">for</span> i <span class="keyword">in</span> range(len(secret)):</span><br><span class="line">    <span class="keyword">if</span> secret[i] not <span class="keyword">in</span> LOWER_ALPHABET: <span class="comment"># Don&#x27;t encode symbols and capital letters (e.g. &quot;A&quot;, &quot; &quot;, &quot;_&quot;, &quot;!&quot;, &quot;&#123;&quot;, &quot;&#125;&quot;)</span></span><br><span class="line">      result += secret[i]</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">      result += LOWER_ALPHABET[(LOWER_ALPHABET.index(secret[i]) + LOWER_ALPHABET.index(key[i])) % 26]</span><br><span class="line"></span><br><span class="line">  <span class="built_in">return</span> result</span><br><span class="line"></span><br><span class="line">flag    = input()</span><br><span class="line">key     = <span class="string">&quot;thequickbrownfoxjumpsoverthelazydog&quot;</span></span><br><span class="line">example = <span class="string">&quot;lorem ipsum dolor sit amet&quot;</span></span><br><span class="line">example_encrypted = encrypt(example, key)</span><br><span class="line">flag_encrypted = encrypt(flag, key)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(f<span class="string">&quot;&#123;key=&#125;&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(f<span class="string">&quot;&#123;example=&#125;&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(f<span class="string">&quot;encrypt(example, key): &#123;example_encrypted&#125;&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(f<span class="string">&quot;encrypt(flag, key): &#123;flag_encrypted&#125;&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p class="bash">output.txt</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">key=<span class="string">&#x27;thequickbrownfoxjumpsoverthelazydog&#x27;</span></span><br><span class="line">example=<span class="string">&#x27;lorem ipsum dolor sit amet&#x27;</span></span><br><span class="line">encrypt(example, key): evvug kztla qtzla exl vqvm</span><br><span class="line">encrypt(flag, key): RpgSyk&#123;qsvop_dcr_wmc_rj_rgfxsime!&#125;</span><br></pre></td></tr></table></figure>
+
+<p>「shall.py」は、ざっくりいうと次のようなことを行うプログラムになっていた。</p>
+<ol>
+<li class="num">入力されたテキストの文字がアルファベットの小文字以外の場合、そのまま出力する。</li>
+<li class="num">入力されたテキストの文字がアルファベットの小文字の場合、</li>
+<li class="num">アルファベット順で見た時の、その文字の位置と、key文字列の位置を足す。</li>
+<li class="num">出た値を26で割った余りを出す。</li>
+<li class="num">出た値の場所にあるLOWER_ALPHABETを暗号化された値としてresultに追加する。</li>
+</ol>
+
+<p><br></p>
+
+<p>例（入力されたテキストの3番目に「c」がある場合）</p>
+<p>LOWER_ALPHABETで「c」は3番目にあるから、(LOWER_ALPHABET.index(secret[i])の値は2。
+<br>
+また、key文字列の3番目は「e」だから、LOWER_ALPHABET.index(key[i])の値は4。
+<br>
+これらを足して26で割ると6余る。
+<br>
+LOWER_ALPHABET[6]は「g」を表すから、暗号化された値は「g」となる。</p>
+
+<p>output.txtにあったRpgSyk{qsvop_dcr_wmc_rj_rgfxsime!}は、フラグをこのpythonファイルで暗号化させたもの。</p>
+
+<li>次のpythonプログラムを実行することで、フラグを出すことができた。</li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">LOWER_ALPHABET = <span class="string">&quot;abcdefghijklmnopqrstuvwxyz&quot;</span></span><br><span class="line"></span><br><span class="line">def encrypt(secret, key):</span><br><span class="line">  assert len(secret) &lt;= len(key)</span><br><span class="line"></span><br><span class="line">  result = <span class="string">&quot;&quot;</span></span><br><span class="line">  <span class="keyword">for</span> i <span class="keyword">in</span> range(len(secret)):</span><br><span class="line">    <span class="keyword">if</span> secret[i] not <span class="keyword">in</span> LOWER_ALPHABET: <span class="comment"># Don&#x27;t encode symbols and capital letters (e.g. &quot;A&quot;, &quot; &quot;, &quot;_&quot;, &quot;!&quot;, &quot;&#123;&quot;, &quot;&#125;&quot;)</span></span><br><span class="line">      result += secret[i]</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">      result += LOWER_ALPHABET[(LOWER_ALPHABET.index(secret[i]) - LOWER_ALPHABET.index(key[i])) % 26]    <span class="comment">#chall.pyでは、「+」になっていたところを「-」に変更</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">return</span> result</span><br><span class="line"></span><br><span class="line">flag    = <span class="string">&quot;RpgSyk&#123;qsvop_dcr_wmc_rj_rgfxsime!&#125;&quot;</span>  <span class="comment">#output.txtに書かれていたフラグになりそうなテキスト</span></span><br><span class="line">key     = <span class="string">&quot;thequickbrownfoxjumpsoverthelazydog&quot;</span> </span><br><span class="line">flag_encrypted = encrypt(flag, key)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(f<span class="string">&quot;encrypt(flag, key): &#123;flag_encrypted&#125;&quot;</span>)</span><br></pre></td></tr></table></figure>
+</ol>
+
+
+<h2 id="#4">今後、、、</h2>
+<p>writeupをもっとうまく書けるようになりたい。</p>
+
+
+
+</div>
+</div>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://htmlcsshed.github.io/delkeyword/2023/04/22/ricercactf2023/" data-id="clgs3nei10000r8ozgk3c6lri" data-title="RICERCA CTF 2023 writeup [welcome, crackme, Revolving letters]" class="article-share-link">共有</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/delkeyword/tags/CTF/" rel="tag">CTF</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/delkeyword/tags/RICERCA-CTF-2023/" rel="tag">RICERCA CTF 2023</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/delkeyword/tags/writeup/" rel="tag">writeup</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/delkeyword/2023/02/26/portablepy/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前の記事</strong>
+      <div class="article-nav-title">色々なpythonのポータブル環境構築</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+    <div class="widget-wrap">
+      <h3 class="widget-title">プロフィール</h3>
+      <div class="widget">
+        <img class="author_png" src="/delkeyword/css/images/author.jpg" alt="">
+        <h2 class="profile_name">Del</h2>
+        <p class="profile_sen">高校生です。土日出勤がほとんどない部活に入り、家でプログラミングや作曲をやってます。</p>
+        <p class="profile_logo"><a class="profile_logo" target="_blank" rel="noopener" href="https://twitter.com/problem_del"><i class="fa-brands fa-twitter fa-2x"></i></a></p>
+        <p class="profile_sen2">
+          <br>
+          ヘッダー画像：<a target="_blank" rel="noopener" href="https://twitter.com/MiyaRui1013">ミヤるい</a></p>
+      </div>
+    </div>
+  
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">カテゴリ</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/delkeyword/categories/CTF/">CTF</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/delkeyword/categories/CTF/writeup/">writeup</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/delkeyword/categories/hexo/">hexo</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/delkeyword/categories/hexo/%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%96%E3%83%AB/">ポータブル</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/delkeyword/categories/python/">python</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/delkeyword/categories/python/%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%96%E3%83%AB/">ポータブル</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/delkeyword/categories/%E6%A0%AA%E5%BC%8F%E6%8A%95%E8%B3%87/">株式投資</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/delkeyword/categories/%E6%A0%AA%E5%BC%8F%E6%8A%95%E8%B3%87/%E6%9C%89%E5%A0%B1%E3%82%AD%E3%83%A3%E3%83%83%E3%83%81%E3%83%A3%E3%83%BC/">有報キャッチャー</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最近の投稿</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/delkeyword/2023/04/22/ricercactf2023/">RICERCA CTF 2023 writeup [welcome, crackme, Revolving letters]</a>
+          </li>
+        
+          <li>
+            <a href="/delkeyword/2023/02/26/portablepy/">色々なpythonのポータブル環境構築</a>
+          </li>
+        
+          <li>
+            <a href="/delkeyword/2022/12/15/yuhokyattya/">有価証券報告書をエクセルで読み込みたい</a>
+          </li>
+        
+          <li>
+            <a href="/delkeyword/2022/12/10/starthexo/">StartHexo.batの内容</a>
+          </li>
+        
+          <li>
+            <a href="/delkeyword/2022/12/09/portablehexo/">hexoをポータブルで使う方法</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグ</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/delkeyword/tags/CTF/" rel="tag">CTF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/delkeyword/tags/RICERCA-CTF-2023/" rel="tag">RICERCA CTF 2023</a></li><li class="tag-list-item"><a class="tag-list-link" href="/delkeyword/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/delkeyword/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/delkeyword/tags/miniconda/" rel="tag">miniconda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/delkeyword/tags/node-js/" rel="tag">node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/delkeyword/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/delkeyword/tags/writeup/" rel="tag">writeup</a></li><li class="tag-list-item"><a class="tag-list-link" href="/delkeyword/tags/%E3%82%A8%E3%82%AF%E3%82%BB%E3%83%AB/" rel="tag">エクセル</a></li><li class="tag-list-item"><a class="tag-list-link" href="/delkeyword/tags/%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%96%E3%83%AB/" rel="tag">ポータブル</a></li><li class="tag-list-item"><a class="tag-list-link" href="/delkeyword/tags/%E6%9C%89%E4%BE%A1%E8%A8%BC%E5%88%B8%E5%A0%B1%E5%91%8A%E6%9B%B8/" rel="tag">有価証券報告書</a></li><li class="tag-list-item"><a class="tag-list-link" href="/delkeyword/tags/%E6%9C%89%E5%A0%B1%E3%82%AD%E3%83%A3%E3%83%83%E3%83%81%E3%83%A3%E3%83%BC/" rel="tag">有報キャッチャー</a></li><li class="tag-list-item"><a class="tag-list-link" href="/delkeyword/tags/%E6%A0%AA%E5%BC%8F%E6%8A%95%E8%B3%87/" rel="tag">株式投資</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">アーカイブ</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/delkeyword/archives/2023/04/">4月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/delkeyword/archives/2023/02/">2月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/delkeyword/archives/2022/12/">12月 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 Del12<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/delkeyword/" class="mobile-nav-link">Home</a>
+  
+    <a href="/delkeyword/archives" class="mobile-nav-link">Articles</a>
+  
+</nav>
+    
+
+
+<script src="/delkeyword/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/delkeyword/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/delkeyword/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
