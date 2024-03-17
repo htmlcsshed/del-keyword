@@ -2,63 +2,63 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>https://www.del-keyword.com/</loc>
+        <loc>https://htmlcsshed.github.io/del-keyword/</loc>
         <changefreq>daily</changefreq>
         <priority>1</priority>
     </url>
 
 
     <url>
-        <loc>https://www.del-keyword.com/categories/hexo/%25E3%2583%259D%25E3%2583%25BC%25E3%2582%25BF%25E3%2583%2596%25E3%2583%25AB/</loc>
+        <loc>https://htmlcsshed.github.io/del-keyword/categories/hexo/%25E3%2583%259D%25E3%2583%25BC%25E3%2582%25BF%25E3%2583%2596%25E3%2583%25AB/</loc>
         <lastmod>2024-03-17T08:44:59.264Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://www.del-keyword.com/categories/hexo/</loc>
+        <loc>https://htmlcsshed.github.io/del-keyword/categories/hexo/</loc>
         <lastmod>2024-03-17T08:44:59.264Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://www.del-keyword.com/categories/python/%25E3%2583%259D%25E3%2583%25BC%25E3%2582%25BF%25E3%2583%2596%25E3%2583%25AB/</loc>
+        <loc>https://htmlcsshed.github.io/del-keyword/categories/python/%25E3%2583%259D%25E3%2583%25BC%25E3%2582%25BF%25E3%2583%2596%25E3%2583%25AB/</loc>
         <lastmod>2024-03-17T08:43:23.266Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://www.del-keyword.com/categories/python/</loc>
+        <loc>https://htmlcsshed.github.io/del-keyword/categories/python/</loc>
         <lastmod>2024-03-17T08:43:23.266Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://www.del-keyword.com/categories/%25E6%25A0%25AA%25E5%25BC%258F%25E6%258A%2595%25E8%25B3%2587/%25E6%259C%2589%25E5%25A0%25B1%25E3%2582%25AD%25E3%2583%25A3%25E3%2583%2583%25E3%2583%2581%25E3%2583%25A3%25E3%2583%25BC/</loc>
+        <loc>https://htmlcsshed.github.io/del-keyword/categories/%25E6%25A0%25AA%25E5%25BC%258F%25E6%258A%2595%25E8%25B3%2587/%25E6%259C%2589%25E5%25A0%25B1%25E3%2582%25AD%25E3%2583%25A3%25E3%2583%2583%25E3%2583%2581%25E3%2583%25A3%25E3%2583%25BC/</loc>
         <lastmod>2024-03-17T08:37:05.208Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://www.del-keyword.com/categories/%25E6%25A0%25AA%25E5%25BC%258F%25E6%258A%2595%25E8%25B3%2587/</loc>
+        <loc>https://htmlcsshed.github.io/del-keyword/categories/%25E6%25A0%25AA%25E5%25BC%258F%25E6%258A%2595%25E8%25B3%2587/</loc>
         <lastmod>2024-03-17T08:37:05.208Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://www.del-keyword.com/categories/CTF/writeup/</loc>
+        <loc>https://htmlcsshed.github.io/del-keyword/categories/CTF/writeup/</loc>
         <lastmod>2023-04-26T15:27:02.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://www.del-keyword.com/categories/CTF/</loc>
+        <loc>https://htmlcsshed.github.io/del-keyword/categories/CTF/</loc>
         <lastmod>2023-04-26T15:27:02.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
