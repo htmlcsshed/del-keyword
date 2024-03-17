@@ -150,6 +150,13 @@ p.bash {
   padding-bottom: 0 !important;
   font-size: 20px !important;
 }
+.tyuou {
+  text-align: center;
+  margin-top: 50px;
+}
+.ads {
+  margin-top: 70px;
+}
 body {
   width: 100%;
 }
@@ -836,7 +843,7 @@ a.article-title:hover {
 }
 .article-entry img,
 .article-entry video {
-  max-width: 100%;
+  max-width: 95%;
   height: auto;
   display: block;
   margin: auto;
