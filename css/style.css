@@ -181,6 +181,46 @@ p.bash {
   width: 100%;
   margin-top: 30px;
 }
+.adsence {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.adsence:before {
+  content: "";
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  height: 0.5px; /* 線の太さ */
+  background: #808080; /* 線の色 */
+  margin-right: 20px;
+}
+.adsence:after {
+  content: "";
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  height: 0.5px; /* 線の太さ */
+  background: #808080; /* 線の色 */
+  margin-left: 20px;
+}
+.adsence {
+  font-size: 15px !important;
+}
 body {
   width: 100%;
 }
