@@ -2,14 +2,30 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>https://htmlcsshed.github.io/del-keyword/</loc>
+        <loc>https://del-keyword.com/</loc>
         <changefreq>daily</changefreq>
         <priority>1</priority>
     </url>
 
 
     <url>
-        <loc>https://htmlcsshed.github.io/del-keyword/2024/03/20/pianoongen/</loc>
+        <loc>https://del-keyword.com/2023/02/26/portablepy/</loc>
+        <lastmod>2024-04-27T14:49:14.101Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://del-keyword.com/2024/04/27/winpy/</loc>
+        <lastmod>2024-04-27T14:38:02.473Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://del-keyword.com/2024/03/20/pianoongen/</loc>
         <lastmod>2024-03-22T13:35:12.611Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -17,7 +33,7 @@
     </url>
 
     <url>
-        <loc>https://htmlcsshed.github.io/del-keyword/2022/12/09/portablehexo/</loc>
+        <loc>https://del-keyword.com/2022/12/09/portablehexo/</loc>
         <lastmod>2024-03-20T14:11:27.952Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -25,7 +41,7 @@
     </url>
 
     <url>
-        <loc>https://htmlcsshed.github.io/del-keyword/2024/03/17/hexodeployerror/</loc>
+        <loc>https://del-keyword.com/2024/03/17/hexodeployerror/</loc>
         <lastmod>2024-03-17T15:19:11.118Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -33,15 +49,7 @@
     </url>
 
     <url>
-        <loc>https://htmlcsshed.github.io/del-keyword/2023/02/26/portablepy/</loc>
-        <lastmod>2024-03-17T08:43:23.266Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://htmlcsshed.github.io/del-keyword/2022/12/15/yuhokyattya/</loc>
+        <loc>https://del-keyword.com/2022/12/15/yuhokyattya/</loc>
         <lastmod>2024-03-17T08:37:05.208Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -49,7 +57,7 @@
     </url>
 
     <url>
-        <loc>https://htmlcsshed.github.io/del-keyword/2023/04/22/ricercactf2023/</loc>
+        <loc>https://del-keyword.com/2023/04/22/ricercactf2023/</loc>
         <lastmod>2023-04-26T15:27:02.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -57,7 +65,7 @@
     </url>
 
     <url>
-        <loc>https://htmlcsshed.github.io/del-keyword/2022/12/10/starthexo/</loc>
+        <loc>https://del-keyword.com/2022/12/10/starthexo/</loc>
         <lastmod>2022-12-30T17:07:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

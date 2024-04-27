@@ -15,17 +15,27 @@
 <!-- End Google Analytics -->
 
   
-  <title>タグ: エクセル | DelのKeyワード</title>
+  <title>pythonのポータブル環境構築～WinPython編～ | DelのKeyワード</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="僕が経験したプログラミングやDTMのことについて書いてます。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="DelのKeyワード">
-<meta property="og:url" content="https://del-keyword.com/tags/%E3%82%A8%E3%82%AF%E3%82%BB%E3%83%AB/index.html">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="pythonのポータブル環境構築～WinPython編～">
+<meta property="og:url" content="https://del-keyword.com/2024/04/27/winpy/index.html">
 <meta property="og:site_name" content="DelのKeyワード">
-<meta property="og:description" content="僕が経験したプログラミングやDTMのことについて書いてます。">
 <meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://del-keyword.com/2024/04/27/winpy/head.png">
+<meta property="og:image" content="https://del-keyword.com/2024/04/27/winpy/download.png">
+<meta property="og:image" content="https://del-keyword.com/2024/04/27/winpy/file.png">
+<meta property="og:image" content="https://del-keyword.com/2024/04/27/winpy/kanryo.png">
+<meta property="og:image" content="https://del-keyword.com/2024/04/27/winpy/version.png">
+<meta property="og:image" content="https://del-keyword.com/2024/04/27/winpy/pip.png">
+<meta property="article:published_time" content="2024-04-27T12:21:17.000Z">
+<meta property="article:modified_time" content="2024-04-27T14:38:02.473Z">
 <meta property="article:author" content="Del12">
+<meta property="article:tag" content="ポータブル">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="WinPython">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://del-keyword.com/2024/04/27/winpy/head.png">
 <meta name="twitter:creator" content="@problem_del">
   
     <link rel="alternate" href="/atom.xml" title="DelのKeyワード" type="application/atom+xml">
@@ -88,40 +98,114 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/12/15/yuhokyattya/" class="archive-article-date">
-  <time class="dt-published" datetime="2022-12-15T08:08:47.000Z" itemprop="datePublished">12月 15</time>
+        <section id="main"><article id="post-winpy" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/04/27/winpy/" class="article-date">
+  <time class="dt-published" datetime="2024-04-27T12:21:17.000Z" itemprop="datePublished">2024-04-27</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/python/">python</a>►<a class="article-category-link" href="/categories/python/%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%96%E3%83%AB/">ポータブル</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/12/15/yuhokyattya/">有価証券報告書をエクセルで読み込みたい</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      pythonのポータブル環境構築～WinPython編～
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <div class="main">
 
+<p><span class="aa">WinPythonを使ってポータブルで使えるPythonの環境構築</span>をしていきます。難しい操作なく簡単にできるのでやってみてください。</p>
+
+<img src="/2024/04/27/winpy/head.png" class="textimg">
+
+<p>これをすることによるメリットは下の通りです。</p>
+<ul>
+<li>消費容量が少なくて済む</li>
+<li>winpythonが入っているフォルダを消すだけでpythonアプリを消せる</li>
+<li>管理者権限がいらない</li>
+</ul>
+
+<span id="more"></span>
+<div class="sen">
+<div class="con">
+<details>
+    <summary><i class="fa-solid fa-list fa-1x"></i>目次<span class="tocopen"> 【 開閉 】</span></summary>
+<p>１，<a href="##1">早速ダウンロード</a></p>
+<p>２，<a href="##2">フォルダーの選択</a></p>
+<p>３、<a href="##3">完了</a></p>
+<p>４，<a href="##4">動作確認</a></p>
+<p>５，<a href="##5">感想</a></p>
+</details>
+</div>
+
+<h2 id="#1">早速ダウンロード</h2>
+<p>こちらのリンクからダウンロードをクリックします。
+<br>
+<a target="_blank" rel="noopener" href="https://sourceforge.net/projects/winpython/">https://sourceforge.net/projects/winpython/</a></p>
+<img src="/2024/04/27/winpy/download.png">
+
+<h2 id="#2">フォルダの選択</h2>
+<p>「Winpython～.exe」と書かれたファイルを実行し、フォルダを選択→「Extract」をクリック。</p>
+<img src="/2024/04/27/winpy/file.png">
+<p><span class="aa">exeファイルの実行時に警告が出ることがありますが</span>、危険なものではないので「詳細な情報」→「実行」でOKです。</p>
+
+<h2 id="#3">完了</h2>
+<p>これだけです。ここから下の「Winpython Command Prompt.exe」や「Jupyter Notebook.exe」を使ってコマンドを実行します。</p>
+<img src="/2024/04/27/winpy/kanryo.png">
+
+<h2 id="#4">動作確認</h2>
+<p>まずバージョン確認。僕がダウンロードしたときは3.11.8でした。</p>
+<img src="/2024/04/27/winpy/version.png">
+<p>次にpipを実行してみます。</p>
+<img src="/2024/04/27/winpy/pip.png">
+<p>できました。
+<br>
+コードの実行はどこのフォルダーに入っているファイルでも実行できます。</p>
+
+<h2 id="#5">感想</h2>
+<p>ほかのポータブルのpythonはパスを通したり、pipを使えるようにしたりと色々することがありますが、winpythonはインストールだけなのでとても楽でした。また、Jupyterなど様々な環境が準備されているので、どんな人でも使いやすいと思います。ぜひやってみてください。</p>
+
+
+
+</div>
+</div>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://del-keyword.com/2024/04/27/winpy/" data-id="clvi2m4qy0000zkv1dxkj13z9" data-title="pythonのポータブル環境構築～WinPython編～" class="article-share-link">共有</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/WinPython/" rel="tag">WinPython</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%96%E3%83%AB/" rel="tag">ポータブル</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2024/03/20/pianoongen/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前の記事</strong>
+      <div class="article-nav-title">外部音源をDAWで使えない！～Keystation88付属音源Eighty Eight Ensambleを使えるようにする～</div>
+    </a>
+  
+</nav>
+
+  
+</article>
 
 
 </section>
