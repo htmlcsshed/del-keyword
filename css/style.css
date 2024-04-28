@@ -221,6 +221,35 @@ p.bash {
 .adsence {
   font-size: 15px !important;
 }
+.over {
+  list-style: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: distribute;
+  -moz-box-pack: distribute;
+  -ms-flex-pack: distribute;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+.over img {
+  width: 30%;
+  height: auto;
+  display: block;
+  opacity: 1;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+}
+.overs:hover img {
+  opacity: 0.5;
+}
 body {
   width: 100%;
 }
