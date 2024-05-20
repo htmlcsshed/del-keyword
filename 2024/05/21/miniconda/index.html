@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HNE7VQDGHP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HNE7VQDGHP');
+</script>
+<!-- End Google Analytics -->
+
+  
+  <title>minicondaを使ってpythonのポータブル環境構築する方法 | DelのKeyワード</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="minicondaを使ってpythonのポータブル環境構築する方法">
+<meta property="og:url" content="https://del-keyword.com/2024/05/21/miniconda/index.html">
+<meta property="og:site_name" content="DelのKeyワード">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://del-keyword.com/2024/05/21/miniconda/head.png">
+<meta property="og:image" content="https://del-keyword.com/2024/05/21/miniconda/site.png">
+<meta property="og:image" content="https://del-keyword.com/2024/05/21/miniconda/site2.png">
+<meta property="og:image" content="https://image.moshimo.com/af-img/0032/000000001250.gif">
+<meta property="og:image" content="https://i.moshimo.com/af/i/impression?a_id=4453981&p_id=54&pc_id=54&pl_id=1250">
+<meta property="og:image" content="https://del-keyword.com/2024/05/21/miniconda/first.png">
+<meta property="og:image" content="https://del-keyword.com/2024/05/21/miniconda/second.png">
+<meta property="og:image" content="https://del-keyword.com/2024/05/21/miniconda/third.png">
+<meta property="og:image" content="https://del-keyword.com/2024/05/21/miniconda/forth.png">
+<meta property="og:image" content="https://del-keyword.com/2024/05/21/miniconda/fifth.png">
+<meta property="og:image" content="https://del-keyword.com/2024/05/21/miniconda/except.png">
+<meta property="og:image" content="https://del-keyword.com/2024/05/21/miniconda/sixth.png">
+<meta property="og:image" content="https://del-keyword.com/2024/05/21/miniconda/seventh.png">
+<meta property="og:image" content="https://image.moshimo.com/af-img/0032/000000001250.gif">
+<meta property="og:image" content="https://i.moshimo.com/af/i/impression?a_id=4453981&p_id=54&pc_id=54&pl_id=1250">
+<meta property="og:image" content="https://del-keyword.com/2024/05/21/miniconda/eighth.png">
+<meta property="og:image" content="https://del-keyword.com/2024/05/21/miniconda/ninth.png">
+<meta property="og:image" content="https://del-keyword.com/2024/05/21/miniconda/tenth.png">
+<meta property="og:image" content="https://image.moshimo.com/af-img/0032/000000001250.gif">
+<meta property="og:image" content="https://i.moshimo.com/af/i/impression?a_id=4453981&p_id=54&pc_id=54&pl_id=1250">
+<meta property="article:published_time" content="2024-05-20T15:21:15.000Z">
+<meta property="article:modified_time" content="2024-05-20T16:01:09.494Z">
+<meta property="article:author" content="Del12">
+<meta property="article:tag" content="ポータブル">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="miniconda">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://del-keyword.com/2024/05/21/miniconda/head.png">
+<meta name="twitter:creator" content="@problem_del">
+  
+    <link rel="alternate" href="/atom.xml" title="DelのKeyワード" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/css/images/author.jpg">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  <link href="https://use.fontawesome.com/releases/v6.2.1/css/all.css" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v6.2.0/css/all.css" rel="stylesheet">
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">DelのKeyワード</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">DTMとかプログラミングとか</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Articles</a>
+        
+          <a class="main-nav-link" href="/comment">comment</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <a id="nav-search-btn" class="nav-icon" title="検索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="検索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://del-keyword.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-miniconda" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/05/21/miniconda/" class="article-date">
+  <time class="dt-published" datetime="2024-05-20T15:21:15.000Z" itemprop="datePublished">2024-05-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/python/">python</a>►<a class="article-category-link" href="/categories/python/%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%96%E3%83%AB/">ポータブル</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      minicondaを使ってpythonのポータブル環境構築する方法
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <div class="main">
+<p>前回に引き続き、<span class="aa">usbや管理者権限がないpcでもpythonを使う方法</span>を書いていきます。今回は<span class="bb">miniconda</span>を使います。</p>
+
+<img src="/2024/05/21/miniconda/head.png" class="textimg">
+
+<span id="more"></span>
+
+<div class="con">
+<details>
+    <summary><i class="fa-solid fa-list fa-1x"></i>目次<span class="tocopen"> 【 開閉 】</span></summary>
+<p>１，<a href="##1">早速ダウンロード</a></p>
+<p>２，<a href="##2">インストールとアクティベート</a></p>
+<p>３，<a href="##3">実際にpythonを使ってみる</a></p>
+<p>４，<a href="##4">最後に</a></p>
+</details>
+</div>
+
+<div class="sen">
+<h2 id="#1">早速ダウンロード</h2>
+<p><a target="_blank" rel="noopener" href="https://docs.anaconda.com/free/miniconda/index.html">https://docs.anaconda.com/free/miniconda/index.html</a>に飛びます。
+<br>
+「Latest Miniconda installer links by Python version」をクリックします。↓</p>
+<img src="/2024/05/21/miniconda/site.png">
+<p>とりあえず最新版をダウンロードします。</p>
+<img src="/2024/05/21/miniconda/site2.png">
+
+<p class="adsence">広告</p>
+<div class="ads">
+<a target="_blank" href="//af.moshimo.com/af/c/click?a_id=4453981&p_id=54&pc_id=54&pl_id=1250" rel="nofollow noopener" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001250.gif" width="468" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4453981&p_id=54&pc_id=54&pl_id=1250" width="1" height="1" style="border:none;">
+</div>
+
+<h2 id="#2">インストールとアクティベート</h2>
+<p>ダウンロードしたexeファイルを起動し、「Next」をクリックします。</p>
+<img src="/2024/05/21/miniconda/first.png">
+<p>規約を読み、「I agree」をクリック。</p>
+<img src="/2024/05/21/miniconda/second.png">
+<p>インストールのタイプを選択します。<span class="aa">「Just Me」はそのPCを一つのアカウントで使っている</span>場合、<span class="bb">「All Users」は複数のアカウントでそのPCを使っている場合</span>に選択します。特別なことがない限り「Just Me」でOKです。選択した後は「Next」をクリック。</p>
+<img src="/2024/05/21/miniconda/third.png">
+<p>「Brows」をクリックしてminicondaをインストールするフォルダを選択し、「Next」をクリック。</p>
+<img src="/2024/05/21/miniconda/forth.png">
+<p>インストールオプションの選択です。それそれの文章をGoogle翻訳で和訳するとこうなりました。</p>
+<img src="/2024/05/21/miniconda/fifth.png">
+</div>
+</div>
+
+<ul class="translate">
+<li>スタートメニューにショートカットを作成します（サポートされているパッケージのみ）。</li>
+<li><p>Miniconda3をPATH環境変数に追加します。
+<br>お勧めしません。これにより、ほかのアプリケーションとの競合が発生する可能性があります。代わりに、Windowsの[スタート]メニューに追加されたコマンドプロンプトメニューとPowershellメニューを使用します。</p></li>
+<li><p>Miniconda3をデフォルトのPython3として登録します。
+<br>推奨。VSCode、PyCharmなどのほかのプログラムがMiniconda3をシステム上のプライマリPython3.12として自動的に検出できるようにします。</p></li>
+<li><p>完了時にパッケージキャッシュをクリアする。
+<br>推奨。機能を損なうことなく、ディスク領域の一部を回復します。</p></li>
+</ul>
+
+<div class="main">
+<div class="sen">
+<p>ポータブルで使う場合は、下2つにチェックを入れればいいと思います。</p>
+<p>※3つ目の項目にチェックを入れたときに下のような警告が出る時があります。
+<br>
+これは<span class="aa">pythonがそのPCにすでにインストールされている</span>際に出ます。
+<br>
+PATHを通さなければ（上の写真の2つ目にチェックを入れなければ）問題なく使えるので、<span class="aa">そのまま「OK」で大丈夫</span>です。</p>
+<img src="/2024/05/21/miniconda/except.png">
+
+<p>インストールが始まります。途中で止まることがありますが、気長に待てば終わります。僕の環境では20分くらいかかりました。終了したら「Next」をクリック。</p>
+<img src="/2024/05/21/miniconda/sixth.png">
+
+<p>「Finish」をクリック。</p>
+<img src="/2024/05/21/miniconda/seventh.png">
+
+<p class="adsence">広告</p>
+<div class="ads">
+<a target="_blank" href="//af.moshimo.com/af/c/click?a_id=4453981&p_id=54&pc_id=54&pl_id=1250" rel="nofollow noopener" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001250.gif" width="468" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4453981&p_id=54&pc_id=54&pl_id=1250" width="1" height="1" style="border:none;">
+</div>
+
+<h2 id="#3">実際にpythonを使ってみる</h2>
+<p>minicondaをインストールしたフォルダにある「condabin」というフォルダーに移動します。</p>
+<img src="/2024/05/21/miniconda/eighth.png">
+
+<p>アドレスバーに「cmd」と入力。</p>
+<img src="/2024/05/21/miniconda/ninth.png">
+
+<p>コマンドプロンプトが開いたら、次のコードを入力します。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">activate.bat</span><br></pre></td></tr></table></figure>
+<p>バージョンを確認します。僕のは3.12.2でした。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python --version</span><br></pre></td></tr></table></figure>
+<p>pipインストールや他のフォルダーにあるpythonファイルを実行することもできます。
+<img src="/2024/05/21/miniconda/tenth.png">
+
+<p class="adsence">広告</p>
+<div class="ads">
+<a target="_blank" href="//af.moshimo.com/af/c/click?a_id=4453981&p_id=54&pc_id=54&pl_id=1250" rel="nofollow noopener" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001250.gif" width="468" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4453981&p_id=54&pc_id=54&pl_id=1250" width="1" height="1" style="border:none;">
+</div>
+
+<h2 id="#4">最後に</h2>
+<p>インストールに時間がかかるのは難点ですが、簡単に使えるのでぜひやってみてください。</p>
+
+
+
+</div>
+</div>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://del-keyword.com/2024/05/21/miniconda/" data-id="clvl3mbas0000esv163t29w1v" data-title="minicondaを使ってpythonのポータブル環境構築する方法" class="article-share-link">共有</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/miniconda/" rel="tag">miniconda</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%96%E3%83%AB/" rel="tag">ポータブル</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2024/04/27/winpy/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前の記事</strong>
+      <div class="article-nav-title">WinPythonを使ってpythonのポータブル環境構築する方法</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+    <div class="widget-wrap">
+      <h3 class="widget-title">プロフィール</h3>
+      <div class="widget">
+        <img class="author_png" src="/css/images/author.jpg" alt="">
+        <h2 class="profile_name">Del12</h2>
+        <p class="profile_sen">高校生です。家でプログラミングや作曲をやってます。備忘録程度にサイトを作っています。</p>
+        <p class="profile_logo"><a class="profile_logo" target="_blank" rel="noopener" href="https://twitter.com/problem_del"><i class="fa-brands fa-twitter fa-2x"></i></a></p>
+        <p class="profile_sen2">
+          <br>
+          ヘッダー画像：<a target="_blank" rel="noopener" href="https://twitter.com/MiyaRui1013">ミヤるい</a></p>
+      </div>
+    </div>
+  
+
+
+
+
+    
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">カテゴリ</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CTF/">CTF</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/CTF/writeup/">writeup</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/DTM/">DTM</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%96%E3%83%AB/">ポータブル</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/python/%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%96%E3%83%AB/">ポータブル</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%A0%AA%E5%BC%8F%E6%8A%95%E8%B3%87/">株式投資</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%A0%AA%E5%BC%8F%E6%8A%95%E8%B3%87/%E6%9C%89%E5%A0%B1%E3%82%AD%E3%83%A3%E3%83%83%E3%83%81%E3%83%A3%E3%83%BC/">有報キャッチャー</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最近の投稿</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/05/21/miniconda/">minicondaを使ってpythonのポータブル環境構築する方法</a>
+          </li>
+        
+          <li>
+            <a href="/2024/04/27/winpy/">WinPythonを使ってpythonのポータブル環境構築する方法</a>
+          </li>
+        
+          <li>
+            <a href="/2024/03/20/pianoongen/">外部音源をDAWで使えない！～Keystation88付属音源Eighty Eight Ensambleを使えるようにする～</a>
+          </li>
+        
+          <li>
+            <a href="/2024/03/17/hexodeployerror/">hexoのデプロイをしたら「unable to auto-detect email address」というエラーが出た</a>
+          </li>
+        
+          <li>
+            <a href="/2023/04/22/ricercactf2023/">RICERCA CTF 2023 writeup [welcome, crackme, Revolving letters]</a>
+          </li>
+        
+      </ul>
+    </div>
+    <div class="tyuou">
+      <a target="_blank" href="//af.moshimo.com/af/c/click?a_id=4453981&p_id=54&pc_id=54&pl_id=1231" rel="nofollow noopener" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001231.gif" width="120" height="500" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4453981&p_id=54&pc_id=54&pl_id=1231" width="1" height="1" style="border:none;">
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグ</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CTF/" rel="tag">CTF</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DAW/" rel="tag">DAW</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DTM/" rel="tag">DTM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Eighty-Eight-Ensamble/" rel="tag">Eighty Eight Ensamble</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Keystation88/" rel="tag">Keystation88</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RICERCA-CTF-2023/" rel="tag">RICERCA CTF 2023</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Studio-One/" rel="tag">Studio One</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WinPython/" rel="tag">WinPython</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/deploy/" rel="tag">deploy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/miniconda/" rel="tag">miniconda</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/" rel="tag">node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/writeup/" rel="tag">writeup</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E3%82%A2%E3%82%AF%E3%83%86%E3%82%A3%E3%83%99%E3%83%BC%E3%83%88/" rel="tag">アクティベート</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E3%82%A8%E3%82%AF%E3%82%BB%E3%83%AB/" rel="tag">エクセル</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E3%83%87%E3%83%97%E3%83%AD%E3%82%A4%E3%82%A8%E3%83%A9%E3%83%BC/" rel="tag">デプロイエラー</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%96%E3%83%AB/" rel="tag">ポータブル</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%89%E4%BE%A1%E8%A8%BC%E5%88%B8%E5%A0%B1%E5%91%8A%E6%9B%B8/" rel="tag">有価証券報告書</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%89%E5%A0%B1%E3%82%AD%E3%83%A3%E3%83%83%E3%83%81%E3%83%A3%E3%83%BC/" rel="tag">有報キャッチャー</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A0%AA%E5%BC%8F%E6%8A%95%E8%B3%87/" rel="tag">株式投資</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9F%B3%E6%BA%90/" rel="tag">音源</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">アーカイブ</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/05/">5月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/04/">4月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">3月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">4月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">2月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">12月 2022</a></li></ul>
+    </div>
+    <div class="tyuou"><a target="_blank" href="//af.moshimo.com/af/c/click?a_id=4453981&p_id=54&pc_id=54&pl_id=1249" rel="nofollow noopener" referrerpolicy="no-referrer-when-downgrade"><img src="//image.moshimo.com/af-img/0032/000000001249.gif" width="120" height="500" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=4453981&p_id=54&pc_id=54&pl_id=1249" width="1" height="1" style="border:none;"></div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 Del12<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Articles</a>
+  
+    <a href="/comment" class="mobile-nav-link">comment</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
