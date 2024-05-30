@@ -9,6 +9,27 @@
 
 
     <url>
+        <loc>https://del-keyword.com/categories/%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%25E4%25BD%259C%25E6%2588%2590/hexo/</loc>
+        <lastmod>2024-05-30T16:05:38.864Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://del-keyword.com/categories/%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%25E4%25BD%259C%25E6%2588%2590/</loc>
+        <lastmod>2024-05-30T16:05:38.864Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://del-keyword.com/categories/%25E3%2583%2596%25E3%2583%25AD%25E3%2582%25B0%25E4%25BD%259C%25E6%2588%2590/hexo/%25E3%2583%259D%25E3%2583%25BC%25E3%2582%25BF%25E3%2583%2596%25E3%2583%25AB/</loc>
+        <lastmod>2024-05-23T15:58:09.050Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://del-keyword.com/categories/python/pyautogui/</loc>
         <lastmod>2024-05-21T15:15:44.866Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -30,22 +51,8 @@
     </url>
 
     <url>
-        <loc>https://del-keyword.com/categories/hexo/</loc>
-        <lastmod>2024-05-20T15:42:05.882Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://del-keyword.com/categories/DTM/</loc>
         <lastmod>2024-04-27T17:12:49.097Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://del-keyword.com/categories/hexo/%25E3%2583%259D%25E3%2583%25BC%25E3%2582%25BF%25E3%2583%2596%25E3%2583%25AB/</loc>
-        <lastmod>2024-04-27T17:12:35.708Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
